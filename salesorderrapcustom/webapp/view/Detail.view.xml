@@ -1,0 +1,66 @@
+<mvc:View controllerName="sales.order.rap.salesorderrapcustom.controller.Detail"
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+      xmlns="sap.m"
+      xmlns:ux="sap.uxap"
+      xmlns:ux2="sap.uxap.ObjectPageLayout"
+      xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+      xmlns:core="sap.ui.core"
+      xmlns:layout="sap.ui.layout"> 
+      
+      <smartForm:SmartForm id="smartFormColumn"
+			editTogglable="true" title="{Name}"
+			validationMode="Async"
+			>
+			<smartForm:layout>
+				<smartForm:ColumnLayout id='ColumnLayout' columnsM="2" columnsL="3" columnsXL="4"/>
+			</smartForm:layout>
+			<smartForm:Group id='Group1' title="Order">
+   
+				<smartForm:GroupElement id='GroupElement1'>
+					<smartField:SmartField id='SmartField1' value="{SOrderNo}" importance="High"/>
+				</smartForm:GroupElement>
+                        <smartForm:GroupElement id='Group1_GroupElement'>
+					<smartField:SmartField id='SmartField2' value="{Status}" importance="High"/>
+				</smartForm:GroupElement>
+                        <smartForm:GroupElement id='GroupElement3'>
+					<smartField:SmartField id='SmartField3' value="{Text}" importance="High"/>
+				</smartForm:GroupElement>
+                        <smartForm:GroupElement id='GroupElement4'>
+					<smartField:SmartField id='SmartField4' value="{Price}" importance="High"/>
+				</smartForm:GroupElement>
+			</smartForm:Group>
+			<smartForm:Group id='Group2' title="Supplier">
+				<smartForm:GroupElement id="Group2_GroupElement1">
+					<smartField:SmartField id='SmartFild5' value="{Customer}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+		</smartForm:SmartForm>
+            <Toolbar width="100%" id="__toolbar1">
+                  <content>
+                      <Button text="{i18n>updateButtonText}" id="__button1" icon="sap-icon://save" press="onEmployeeUpdate"/>
+                      <Button text="{i18n>deleteButtonText}" id="__button2" icon="sap-icon://delete" press="onEmployeeDelete"/>
+                  </content>
+              </Toolbar>
+            
+            <!--
+            <ux:ObjectPageLayout id="smartFormColumn">
+
+                  <ux:headerTitle>
+                       <ux:ObjectPageHeader id="pageHeader" objectTitle="Order details">
+                             <ux:actions>
+                                   <ux:ObjectPageHeaderActionButton id="actionbutton1" icon="sap-icon://edit" text="Edit" />
+                                   <ux:ObjectPageHeaderActionButton id="actionbutton2"  icon="sap-icon://save" text="Save" />
+                             </ux:actions>
+                       </ux:ObjectPageHeader>
+                 </ux:headerTitle>
+           
+                 <ux:headerContent>
+                       <Label id='label' text="Order number"/>                                                
+                       <Text id="text" text="{SOrderNo}"/>
+                 </ux:headerContent>
+           
+           </ux:ObjectPageLayout>
+      -->
+
+</mvc:View>

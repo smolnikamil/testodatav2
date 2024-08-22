@@ -1,0 +1,23 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="sales.order.rap.salesorderrapcustom.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="orderListPage" title="{i18n>title}" class="sapUiResponsiveContentPadding">
+
+      <List id="List"
+      headerText="Products"
+      headerLevel="H2"
+      items="{
+            path: '/SalesHeader'
+      }" >
+      <StandardListItem id="StandardListItem"
+            title="Order {SOrderNo}"
+            type="Navigation"
+            press=".onListItemPressed" 
+            description = '{Name}'
+            info = '{Text}'
+            icon = 'sap-icon://action'
+            />
+</List>
+    </Page>
+</mvc:View>
